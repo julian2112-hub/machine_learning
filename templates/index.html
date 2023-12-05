@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Learning Project</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body class="container mt-5">
+    <div class="jumbotron">
+        <h1 class="display-4">Machine Learning Project</h1>
+        <form method="post" class="mt-4">
+            <div class="form-group">
+                <label for="user_text">Enter title of the news:</label>
+                <input type="text" class="form-control" id="user_text" name="user_text" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Classify</button>
+        </form>
+
+        {% if input_sentence %}
+            <div class="mt-4">
+                <p class="lead">{{ input_sentence }}</p>
+            </div>
+        {% endif %}
+        <hr>
+        <hr>
+
+        {% if binary_classification_b_e %}
+        <div class="mt-4">
+            <p class="lead">{{ binary_classification_b_e }}</p>
+        </div>
+        {% endif %}
+        <hr>
+
+        {% if binary_classification_b_m %}
+        <div class="mt-4">
+            <p class="lead">{{ binary_classification_b_m }}</p>
+        </div>
+        {% endif %}
+        <hr>
+
+        {% if binary_classification_b_t %}
+        <div class="mt-4">
+            <p class="lead">{{ binary_classification_b_t }}</p>
+        </div>
+        {% endif %}
+        <hr>
+
+        {% if binary_classification_e_m %}
+        <div class="mt-4">
+            <p class="lead">{{ binary_classification_e_m }}</p>
+        </div>
+        {% endif %}
+        <hr>
+
+        {% if binary_classification_t_e %}
+        <div class="mt-4">
+            <p class="lead">{{ binary_classification_t_e }}</p>
+        </div>
+        {% endif %}
+        <hr>
+
+        {% if binary_classification_t_m %}
+        <div class="mt-4">
+            <p class="lead">{{ binary_classification_t_m }}</p>
+        </div>
+        {% endif %}
+        <hr>
+
+
+        {% if category_results %}
+        <div class="mt-4">
+            <p class="lead">{{ category_results }}</p>
+        </div>
+        {% endif %}
+        <hr>
+        <div class="mt-4">
+            <p class="lead">b: business<br/>t: science and technology<br/>e: entertainment and<br/>m: health</p>
+        </div>
+        
+        
+    </div>
+</body>
+
+</html>
